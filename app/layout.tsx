@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 import Motion from "./components/Motion";
 import { SITE_URL } from "./lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -93,6 +94,7 @@ export default function RootLayout({
         </noscript>
         {children}
         <Motion />
+        <Analytics />
       </body>
     </html>
   );
